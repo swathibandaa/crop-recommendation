@@ -15,7 +15,7 @@ st.title("🌾 Smart Crop Recommendation Dashboard (KNN Classifier)")
 # Load Dataset
 @st.cache_data
 def load_data():
-    data = pd.read_csv(r"C:\Users\Swathi\OneDrive\Desktop\Crop_recommendation.csv")
+    data = pd.read_csv("Crop_recommendation.csv")
     return data
 
 data = load_data()
@@ -78,4 +78,5 @@ if st.checkbox("Show Confusion Matrix Heatmap"):
 
 # Data Preview
 if st.checkbox("Show Raw Dataset"):
+
     st.write(data)
